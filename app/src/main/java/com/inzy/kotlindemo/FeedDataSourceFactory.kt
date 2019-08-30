@@ -12,7 +12,7 @@ class FeedDataSourceFactory(
 
 
     override fun create(): DataSource<Int, Feed> {
-        val feedDataSource = FeedDataSource(networkCall, compositeDisposable);
+        val feedDataSource = FeedDataSource(networkCall, compositeDisposable );
         feedDataSourceLiveData.postValue(feedDataSource)
         return feedDataSource
     }
